@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  nvim:
+    build: .
+    volumes:
+      - ./nvim/:/root/.config/nvim
+      - .:/app/
+      - lazy_data:/root/.local/share/nvim/lazy
+      - lazy_state:/root/.local/state/nvim/lazy
+
+volumes:
+  lazy_data:
+  lazy_state:
