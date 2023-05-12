@@ -8,6 +8,7 @@ M.setup = function()
 	require "plugins.configs.ui_nvim_tree"
 	require "plugins.configs.ui_lualine"
 	require "plugins.configs.ui_treesitter"
+	require "plugins.configs.ui_toggleterm"
 	require "plugins.configs.ui_telescope"
 	require "plugins.configs.ui_legendary"
 	require "plugins.configs.ui_indent_blankline"

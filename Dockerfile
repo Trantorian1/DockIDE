@@ -6,6 +6,9 @@ RUN apt-get install -y clang && apt-get install -y wget && \
 	apt-get install -y unzip && apt-get install -y curl && \
 	apt-get install -y gdb
 
+RUN apt-get install -y zsh && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+ENV SHELL=/bin/zsh
+
 RUN LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*') && \
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz" && \
 tar xf lazygit.tar.gz lazygit && \

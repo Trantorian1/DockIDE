@@ -7,5 +7,5 @@ if not plugins.lsp.mason.lsp.loaded then
 end
 -- sets up mason-lsp
 plugins.lsp.mason.lsp.setup {
-	ensure_installed = { "clangd" }
+	ensure_installed = { "clangd", "lua_ls" }
 }

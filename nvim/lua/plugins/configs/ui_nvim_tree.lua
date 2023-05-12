@@ -22,7 +22,7 @@ plugins.ui.nvim_tree.core.setup {
 	},
 
 	filters = {
-		dotfiles = true,
+		dotfiles = false,
 	},
 }
 

@@ -14,7 +14,7 @@ local function term_size(term)
 end
 
 plugins.ui.toggleterm.setup {
-	open_mapping = [[<A>t]],
+	-- open_mapping = [[<A>t]],
 	direction = "horizontal",
 	size = term_size,
 	start_in_insert = true,

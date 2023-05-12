@@ -22,6 +22,7 @@ local plugins = {
 	'yamatsum/nvim-cursorline',
 	'folke/zen-mode.nvim',
 	'lukas-reineke/virt-column.nvim',
+	'akinsho/toggleterm.nvim',
 	'nvim-treesitter/nvim-treesitter-context',
 	{
 		'SmiteshP/nvim-navic',
@@ -121,6 +122,7 @@ local plugins = {
 			'nvim-treesitter/nvim-treesitter'
 		}
 	},
+
 	-- GIT
 	'lewis6991/gitsigns.nvim',
 	'kdheepak/lazygit.nvim',

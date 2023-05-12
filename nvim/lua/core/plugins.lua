@@ -18,6 +18,7 @@ M.color = {
 }
 
 M.ui = {
+	toggleterm = require_plugin('toggleterm'),
 	lualine = require_plugin('lualine'),
 	virt_column = require_plugin("virt-column"),
 	telescope = require_plugin("telescope"),
