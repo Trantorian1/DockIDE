@@ -291,7 +291,7 @@ plugins.ui.legendary.setup {
 		},
 		-- step over
 		{
-			[[<F10>]],
+			[[<CR>]],
 			function() plugins.dap.dap.step_over() end,
 			description = "[DAP] Step over",
 			modes = { NORMAL },
@@ -299,7 +299,7 @@ plugins.ui.legendary.setup {
 		},
 		-- step into
 		{
-			[[<F11>]],
+			[[<S-Down>]],
 			function() plugins.dap.dap.step_into() end,
 			description = "[DAP] Step into",
 			modes = { NORMAL },
@@ -307,7 +307,7 @@ plugins.ui.legendary.setup {
 		},
 		-- step out
 		{
-			[[<S-F11>]],
+			[[<S-Up>]],
 			function() plugins.dap.dap.step_out() end,
 			description = "[DAP] Step out",
 			modes = { NORMAL },
