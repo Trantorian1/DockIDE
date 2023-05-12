@@ -269,7 +269,52 @@ plugins.ui.legendary.setup {
 		},
 
 		-- ====================================================================
-		-- 									EDITING
+		-- 								      DAP
+		-- ====================================================================
+
+		-- toggle breakpoint
+		{
+			[[<S-b>]],
+			function() plugins.dap.dap.toggle_breakpoint() end,
+			description = "[DAP] Toggle breakpoint",
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- starts/stops debugging session
+		{
+			[[<F5>]],
+			function() plugins.dap.dap.continue() end,
+			description = "[DAP] Starts/stops debugging session",
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- step over
+		{
+			[[<F10>]],
+			function() plugins.dap.dap.step_over() end,
+			description = "[DAP] Step over",
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- step into
+		{
+			[[<F11>]],
+			function() plugins.dap.dap.step_into() end,
+			description = "[DAP] Step into",
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- step out
+		{
+			[[<S-F11>]],
+			function() plugins.dap.dap.step_out() end,
+			description = "[DAP] Step out",
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+
+		-- ====================================================================
+		-- 						        	EDITING
 		-- ====================================================================	
 		-- indent right
 		{
