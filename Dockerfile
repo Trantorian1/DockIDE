@@ -23,6 +23,10 @@ RUN mkdir -p $HOME/.config/nvim
 
 ENV PATH $PATH:/app/nvim-linux64/bin
 
+RUN mkdir -p /root/.ssh && \
+    chmod 0700 /root/.ssh && \
+    ssh-keyscan github.com >> /root/.ssh/known_hosts
+
 WORKDIR /app
 
 CMD ["nvim"]
