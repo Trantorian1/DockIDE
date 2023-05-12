@@ -1,6 +1,7 @@
 -- dependencies
 local plugins = require "core.plugins"
 local pickers = require "core.pickers"
+local ui      = require "core.ui"
 
 if not plugins.ui.legendary["loaded"] then
     return
@@ -179,7 +180,7 @@ plugins.ui.legendary.setup {
 		{
 			[[<A-1>]],
 			function()
-				vim.cmd("NvimTreeFocus")
+				ui.set_left(ui.file_tree)
 			end,
 			description = '[UI] Open file tree',
 			modes = { NORMAL },
@@ -189,7 +190,17 @@ plugins.ui.legendary.setup {
 		{
 			[[<A-2>]],
 			function()
-				vim.cmd("Trouble")
+				ui.set_bottom(ui.terminal)
+			end,
+			description = '[UI] Open terminal',
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- diagnostics
+		{
+			[[<A-3>]],
+			function()
+				ui.set_bottom(ui.diagnostics)
 			end,
 			description = '[UI] Open diagnostic menu',
 			modes = { NORMAL },
@@ -197,21 +208,11 @@ plugins.ui.legendary.setup {
 		},
 		-- lazygit
 		{
-			[[<A-3>]],
+			[[<A-4>]],
 			function()
 				vim.cmd("LazyGit")
 			end,
 			description = '[UI] Open git menu',
-			modes = { NORMAL },
-			opts = mapping_opts
-		},
-		-- navbuddy
-		{
-			[[<A-0>]],
-			function()
-				vim.cmd("Navbuddy")
-			end,
-			description = '[UI] Toggles navigation ui',
 			modes = { NORMAL },
 			opts = mapping_opts
 		},

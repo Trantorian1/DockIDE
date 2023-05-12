@@ -38,14 +38,6 @@ local plugins = {
 		opts = {}
 	},
 	{
-		'SmiteshP/nvim-navbuddy',
-		dependencies = {
-			"neovim/nvim-lspconfig",
-			"SmiteshP/nvim-navic",
-			"MunifTanjim/nui.nvim"
-		}
-	},
-	{
 		'folke/trouble.nvim',
 		dependencies = 'nvim-tree/nvim-web-devicons'
 	},

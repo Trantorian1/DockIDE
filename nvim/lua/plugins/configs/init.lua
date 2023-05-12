@@ -15,7 +15,6 @@ M.setup = function()
 	require "plugins.configs.ui_cursorline"
 	require "plugins.configs.ui_virt_column"
 	require "plugins.configs.ui_navic"
-	require "plugins.configs.ui_navbuddy"
 	require "plugins.configs.ui_trouble"
 
 	-- edit plugins
