@@ -8,22 +8,25 @@ end
 -- sets up mason dap
 plugins.dap.mason.dap.setup {
 	ensure_installed = { 'codelldb' },
-	handlers = {
-		function(config)
-			plugins.dap.mason.dap.default_setup(config)
-		end,
-		codelldb = function(config)
-			config.adapters = {
-				type = "server",
-				port = "${port}",
-				executable = {
-					command = "codelldb",
-					args = { "--port", "${port}" },
-				},
-			}
-			plugins.dap.mason.dap.default_setup(config)
-		end
-	},
+	-- handlers = {
+	-- 	function(config)
+	-- 		plugins.dap.mason.dap.default_setup(config)
+	-- 	end,
+	-- 	codelldb = function(config)
+	-- 		config.adapters = {
+	-- 			type = "server",
+	-- 			port = "${port}",
+	-- 			executable = {
+	-- 				command = "/root/.local/share/nvim/mason/bin/codelldb",
+	-- 				args = { "--port", "${port}" },
+	-- 			},
+	-- 		}
+	-- 		config.configurations.cpp  = plugins.dap.mason.dap.mappings.codelldb
+	-- 		config.configurations.c    = plugins.dap.mason.dap.mappings.codelldb
+	-- 		config.configurations.rust = plugins.dap.mason.dap.mappings.codelldb
+	-- 		plugins.dap.mason.dap.default_setup(config)
+	-- 	end
+	-- },
 }
 
 -- require('dap').adapters.codelldb = {

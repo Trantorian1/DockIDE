@@ -15,6 +15,12 @@ install lazygit /usr/local/bin
 
 WORKDIR /bin
 
+RUN wget https://github.com/microsoft/vscode-cpptools/releases/download/v1.15.4/cpptools-linux.vsix -P cpptools
+RUN unzip cpptools/cpptools-linux.vsix -d cpptools
+RUN rm cpptools/cpptools-linux.vsix
+RUN chmod u+x cpptools/extension/debugAdapters/bin/OpenDebugAD7
+RUN ln -s cpptools/extension/debugAdapters/bin/OpenDebugAD7 ./
+
 RUN wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim-linux64.tar.gz
 RUN tar xzvf nvim-linux64.tar.gz && rm -rf nvim-linux64.tar.gz
 RUN ln -s /bin/nvim-linux64/bin/nvim /bin/

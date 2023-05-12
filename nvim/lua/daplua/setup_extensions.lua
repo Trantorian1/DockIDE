@@ -11,6 +11,8 @@ if not plugins.dap.ui["loaded"] then
 end
 
 function M.setup()
+	require("daplua.settings.c").setup()
+	plugins.dap.ui.setup()
 	plugins.dap.dap.listeners.after.event_initialized["dapui_config"] = function()
 		plugins.dap.ui.open()
 	end
@@ -19,16 +21,6 @@ function M.setup()
 	end
 	plugins.dap.dap.listeners.before.event_exited["dapui_config"] = function()
 		plugins.dap.ui.close()
-	end
-	local dap, dapui = require("dap"), require("dapui")
-	dap.listeners.after.event_initialized["dapui_config"] = function()
-	  dapui.open()
-	end
-	dap.listeners.before.event_terminated["dapui_config"] = function()
-	  dapui.close()
-	end
-	dap.listeners.before.event_exited["dapui_config"] = function()
-	  dapui.close()
 	end
 end
 
