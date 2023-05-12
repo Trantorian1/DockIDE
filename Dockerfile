@@ -7,6 +7,7 @@ RUN apt-get install -y tar
 RUN apt-get install -y git
 RUN apt-get install -y unzip
 RUN apt-get install -y curl
+RUN apt-get install -y gdb
 
 RUN LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*') && \
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz" && \
@@ -14,12 +15,6 @@ tar xf lazygit.tar.gz lazygit && \
 install lazygit /usr/local/bin
 
 WORKDIR /bin
-
-RUN wget https://github.com/microsoft/vscode-cpptools/releases/download/v1.15.4/cpptools-linux.vsix -P cpptools
-RUN unzip cpptools/cpptools-linux.vsix -d cpptools
-RUN rm cpptools/cpptools-linux.vsix
-RUN chmod u+x cpptools/extension/debugAdapters/bin/OpenDebugAD7
-RUN ln -s cpptools/extension/debugAdapters/bin/OpenDebugAD7 ./
 
 RUN wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim-linux64.tar.gz
 RUN tar xzvf nvim-linux64.tar.gz && rm -rf nvim-linux64.tar.gz

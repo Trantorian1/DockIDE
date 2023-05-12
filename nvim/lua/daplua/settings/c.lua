@@ -12,7 +12,7 @@ function M.setup()
 	plugins.dap.dap.adapters.cppdbg = {
 		id = 'cppdbg',
 		type = 'executable',
-		command = '/bin/OpenDebugAD7'
+		command = '/root/.local/share/nvim/mason/bin/OpenDebugAD7'
 	}
 	plugins.dap.dap.configurations.cpp = {
 		{

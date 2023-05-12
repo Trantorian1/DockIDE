@@ -7,7 +7,7 @@ end
 
 -- sets up mason dap
 plugins.dap.mason.dap.setup {
-	ensure_installed = { 'codelldb' },
+	ensure_installed = { 'cppdbg' },
 	-- handlers = {
 	-- 	function(config)
 	-- 		plugins.dap.mason.dap.default_setup(config)

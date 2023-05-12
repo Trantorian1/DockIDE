@@ -6,8 +6,8 @@ services:
     volumes:
       - ./nvim/:/root/.config/nvim
       - .:/app/
-      - lazy_data:/root/.local/share/nvim/lazy
-      - lazy_state:/root/.local/state/nvim/lazy
+      - lazy_data:/root/.local/share/nvim/
+      - lazy_state:/root/.local/state/nvim/
 
 volumes:
   lazy_data:
