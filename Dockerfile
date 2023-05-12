@@ -11,6 +11,10 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar xf lazygit.tar.gz lazygit && \
 install lazygit /usr/local/bin
 
+RUN curl https://bootstrap.pypa.io/get-pip.py | python3 && \
+	python3 -m pip install --upgrade pip setuptools && \
+	python3 -m pip install norminette
+
 WORKDIR /bin
 
 RUN wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim-linux64.tar.gz && \
