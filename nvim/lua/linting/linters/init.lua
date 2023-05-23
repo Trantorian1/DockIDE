@@ -1,1 +1,0 @@
-require "linting.linters.norminette"

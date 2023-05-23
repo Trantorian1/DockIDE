@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 
 # main dependencies
 RUN apt-get update
-RUN apt-get install -y clang wget tar git unzip curl gdb
+RUN apt-get install -y clang wget tar git unzip curl gdb tree
 
 # installing zsh
 RUN apt-get install -y zsh && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -28,8 +28,7 @@ WORKDIR /bin
 # downloading neovim
 RUN wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim-linux64.tar.gz && \
 	tar xzvf nvim-linux64.tar.gz && rm -rf nvim-linux64.tar.gz && \
-	ln -s /bin/nvim-linux64/bin/nvim /bin/ && \
-	mkdir -p $HOME/.config/nvim
+	ln -s /bin/nvim-linux64/bin/nvim /bin/ && mkdir -p /root/.config/nvim/
 
 ENV PATH $PATH:/app/nvim-linux64/bin
 
