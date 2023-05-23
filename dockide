@@ -3,5 +3,6 @@
 sudo docker run -it \
 	-v .:/app/ -v nvim_data:/root/.local/share/nvim/ \
 	-v nvim_state:/root/.local/state/nvim/ \
-	-v /$HOME/.config/dockIDE/:/root/.config/nvim/ \
-	nvim-docker:2
+	-v $HOME/.config/dockIDE/:/root/.config/nvim/ \
+	-e $HOME/.config/dockIDE/user.env\
+	trantorian/nvim:0.2
