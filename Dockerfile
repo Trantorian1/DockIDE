@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 # main dependencies
 RUN apt-get update
 RUN apt-get install -y clang wget tar git unzip curl gdb tree \
-            libreadline-dev libcriterion-dev
+            libreadline-dev libcriterion-dev make
 
 # installing zsh
 RUN apt-get install -y zsh && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

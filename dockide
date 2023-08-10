@@ -6,4 +6,4 @@ docker run --rm -it                                  \
 	-v $HOME/.config/dockIDE/:/root/.config/nvim/    \
 	-v $SSH_AUTH_SOCK:/ssh-agent                     \
 	-e $HOME/.config/dockIDE/user.env                \
-	trantorian/nvim:0.5
+	trantorian/nvim:0.6
