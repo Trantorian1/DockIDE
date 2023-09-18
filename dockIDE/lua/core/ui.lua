@@ -29,23 +29,6 @@ M.diagnostics = module_factory(
 	"BOTTOM"
 )
 
-M.terminal = module_factory(
-	function()
-		if (M.terminal.open == false) then
-			M.terminal.open = true
-			vim.cmd [[ToggleTerm]]
-		end
-	end,
-	function()
-		if (M.terminal.open == true) then
-			M.terminal.open = false
-			vim.cmd [[ToggleTerm]]
-		end
-	end,
-	"BOTTOM"
-)
-M.terminal.open = false
-
 M.none = module_factory(
 	function() end,
 	function() end,
@@ -54,7 +37,7 @@ M.none = module_factory(
 
 M._left = M.file_tree
 M._right = M.none
-M._bottom = M.terminal
+M._bottom = M.none
 
 function M.hide()
 	M._right._hide()

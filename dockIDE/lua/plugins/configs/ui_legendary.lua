@@ -186,19 +186,9 @@ plugins.ui.legendary.setup {
 			modes = { NORMAL },
 			opts = mapping_opts
 		},
-		-- terminal
-		{
-			[[<A-2>]],
-			function()
-				ui.set_bottom(ui.terminal)
-			end,
-			description = '[UI] Open terminal',
-			modes = { NORMAL },
-			opts = mapping_opts
-		},
 		-- diagnostics
 		{
-			[[<A-3>]],
+			[[<A-2>]],
 			function()
 				ui.set_bottom(ui.diagnostics)
 			end,
@@ -208,7 +198,7 @@ plugins.ui.legendary.setup {
 		},
 		-- lazygit
 		{
-			[[<A-4>]],
+			[[<A-3>]],
 			function()
 				vim.cmd("LazyGit")
 			end,
