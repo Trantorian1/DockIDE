@@ -208,9 +208,14 @@ plugins.ui.legendary.setup {
 			modes = { NORMAL },
 			opts = mapping_opts
 		},
+
+		-- ====================================================================
+		-- 								   GIT
+		-- ====================================================================
+
 		-- diffview
 		{
-			[[<A-4>]],
+			[[<S-g>v]],
 			function()
 				if (diffviewOpen == false) then
 					vim.cmd("DiffviewOpen")
@@ -219,7 +224,22 @@ plugins.ui.legendary.setup {
 				end
 				diffviewOpen = not diffviewOpen
 			end,
-			description = '[UI] Open diffview',
+			description = '[GIT] Open diffview',
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- diffview file history
+		{
+			[[<S-g>h]],
+			function()
+				if (diffviewOpen == false) then
+					vim.cmd("DiffviewFileHistory")
+				else
+					vim.cmd("DiffviewClose")
+				end
+				diffviewOpen = not diffviewOpen
+			end,
+			description = '[UI] Open git file history',
 			modes = { NORMAL },
 			opts = mapping_opts
 		},
