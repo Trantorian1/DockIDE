@@ -15,6 +15,7 @@ M.setup = function()
 	require "plugins.configs.ui_virt_column"
 	require "plugins.configs.ui_navic"
 	require "plugins.configs.ui_trouble"
+	require "plugins.configs.ui_dap"
 
 	-- edit plugins
 	require "plugins.configs.edit_smart_splits"

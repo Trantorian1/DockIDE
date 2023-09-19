@@ -12,7 +12,6 @@ end
 
 function M.setup()
 	require("daplua.settings.c").setup()
-	plugins.dap.ui.setup()
 	plugins.dap.dap.listeners.after.event_initialized["dapui_config"] = function()
 		vim.cmd [[tabnew]]
 		plugins.dap.ui.open()
