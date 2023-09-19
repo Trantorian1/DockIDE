@@ -7,6 +7,8 @@ if not plugins.ui.legendary["loaded"] then
     return
 end
 
+local diffviewOpen = false
+
 -- mapping options
 local mapping_opts = {
 	noremap = true,	-- defines mapping type and avoid recursive mappings
@@ -203,6 +205,21 @@ plugins.ui.legendary.setup {
 				vim.cmd("LazyGit")
 			end,
 			description = '[UI] Open git menu',
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- diffview
+		{
+			[[<A-4>]],
+			function()
+				if (diffviewOpen == false) then
+					vim.cmd("DiffviewOpen")
+				else
+					vim.cmd("DiffviewClose")
+				end
+				diffviewOpen = not diffviewOpen
+			end,
+			description = '[UI] Open diffview',
 			modes = { NORMAL },
 			opts = mapping_opts
 		},

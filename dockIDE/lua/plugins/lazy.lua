@@ -118,6 +118,7 @@ local plugins = {
 	-- GIT
 	'lewis6991/gitsigns.nvim',
 	'kdheepak/lazygit.nvim',
+	'sindrets/diffview.nvim',
 }
 
 local opts = {
