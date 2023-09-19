@@ -361,6 +361,32 @@ plugins.ui.legendary.setup {
 			description = "[EDIT] Activate zen mode",
 			modes = { NORMAL },
 			opts = mapping_opts
-		}
+		},
+		-- scroll down
+		{
+			[[<S-Down>]],
+			function()
+				if not plugins.edit.neoscroll["loaded"] then
+					return
+				end
+				plugins.edit.neoscroll.scroll(1, true, 300)
+			end,
+			description = "[EDIT] Scroll down",
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
+		-- scroll up
+		{
+			[[<S-Up>]],
+			function()
+				if not plugins.edit.neoscroll["loaded"] then
+					return
+				end
+				plugins.edit.neoscroll.scroll(-1, true, 300)
+			end,
+			description = "[EDIT] Scroll up",
+			modes = { NORMAL },
+			opts = mapping_opts
+		},
     }
 }

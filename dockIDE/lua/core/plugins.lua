@@ -48,6 +48,7 @@ M.edit = {
 	twilight = require_plugin("twilight"),
 	autosave = require_plugin("auto-save"),
 	backseat = require_plugin("backseat"),
+	neoscroll = require_plugin("neoscroll"),
 	comment = {
 		core = require_plugin("Comment"),
 		api = require_plugin("Comment.api"),

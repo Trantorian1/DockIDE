@@ -50,6 +50,7 @@ local plugins = {
 	'42Paris/42header',
 	'ziontee113/icon-picker.nvim',
 	'james1236/backseat.nvim',
+	'karb94/neoscroll.nvim',
 
 	-- LINTING
 	'jose-elias-alvarez/null-ls.nvim',

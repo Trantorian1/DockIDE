@@ -24,7 +24,7 @@ M.setup = function()
 	require "plugins.configs.edit_visual_multi"
 	require "plugins.configs.edit_neogen"
 	require "plugins.configs.edit_backseat"
-	-- require "plugins.configs.edit_autosave"
+	require "plugins.configs.edit_neoscroll"
 
 	-- git plugins
 	require "plugins.configs.git_gitsigns"
