@@ -372,7 +372,7 @@ plugins.ui.legendary.setup {
 				plugins.edit.neoscroll.scroll(1, true, 300)
 			end,
 			description = "[EDIT] Scroll down",
-			modes = { NORMAL },
+			mode = { NORMAL, VISUAL },
 			opts = mapping_opts
 		},
 		-- scroll up
@@ -385,7 +385,7 @@ plugins.ui.legendary.setup {
 				plugins.edit.neoscroll.scroll(-1, true, 300)
 			end,
 			description = "[EDIT] Scroll up",
-			modes = { NORMAL },
+			mode = { NORMAL, VISUAL },
 			opts = mapping_opts
 		},
     }
