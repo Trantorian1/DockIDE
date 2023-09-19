@@ -28,6 +28,20 @@ and much, much more
 git clone https://github.com/Trantorian1/DockIDE.git && ./install
 ```
 
+## Git integration
+
+> For git integration to work, you will need to specify your git username
+and email in /dockIDE/user.env
+
+```sh
+echo "GIT_COMMITTER_NAME=yourname" > dockide/user.env &&
+echo "GIT_COMMITTER_EMAIL=your@email.com" >> dockIDE/user.env
+```
+
+Then run `./install` for the changes to take place.
+
+## Running
+
 To run **dockide**, make sure that **$HOME/bin** is part of your **PATH**
 
 ```sh
