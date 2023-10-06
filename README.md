@@ -34,7 +34,7 @@ git clone https://github.com/Trantorian1/DockIDE.git && ./install
 and email in /dockIDE/user.env
 
 ```sh
-echo "GIT_COMMITTER_NAME=yourname" > dockide/user.env &&
+echo "GIT_COMMITTER_NAME=yourname" > dockIDE/user.env &&
 echo "GIT_COMMITTER_EMAIL=your@email.com" >> dockIDE/user.env
 ```
 
