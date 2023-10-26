@@ -25,7 +25,10 @@ and much, much more
 > _PLease note that you will need to have [docker](https://docs.docker.com/engine/install/) installed for dockIDE to work_
 
 ```sh
-git clone https://github.com/Trantorian1/DockIDE.git && ./install
+git clone https://github.com/Trantorian1/DockIDE.git \
+&& cd DockIDE \
+&& ./install \
+&& dockide
 ```
 
 ## Git integration
