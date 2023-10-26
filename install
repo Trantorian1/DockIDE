@@ -3,5 +3,5 @@
 mkdir -p $HOME/.config
 mkdir -p $HOME/bin/
 
-cp -r ./dockIDE/ $HOME/.config
+cp -r ./dockIDE $HOME/.config
 cp -r ./dockide $HOME/bin

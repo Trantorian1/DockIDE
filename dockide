@@ -2,7 +2,6 @@
 
 docker run                                                       \
  	--rm                                                         \
- 	-it                                                          \
  	-v /tmp/.X11-unix:/tmp/.X11-unix                             \
  	-v .:/app/ -v nvim_data:/root/.local/share/nvim/             \
  	-v nvim_state:/root/.local/state/nvim/                       \
@@ -13,4 +12,4 @@ docker run                                                       \
  	-e XAUTHORITY                                                \
  	-e QT_X11_NO_MITSHM=1                                        \
 	--env-file $HOME/.config/dockIDE/user.env                    \
-	trantorian/nvim:0.9
+	trantorian/nvim:0.9 > output.log 2>&1 &
