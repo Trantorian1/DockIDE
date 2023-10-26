@@ -31,6 +31,8 @@ RUN apt-get update \
 		make \
 		zsh \
 		# neovide
+		xclip \
+		xsel \
 		fontconfig \
 		libxcursor1 \
 		libxrandr2 \
