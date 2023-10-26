@@ -13,4 +13,4 @@ docker run                                                       \
  	-e XAUTHORITY                                                \
  	-e QT_X11_NO_MITSHM=1                                        \
 	--env-file $HOME/.config/dockIDE/user.env                    \
-	trantorian/nvim:0.8
+	trantorian/nvim:0.9
