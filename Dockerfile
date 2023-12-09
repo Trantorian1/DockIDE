@@ -17,6 +17,12 @@ RUN apt-get update \
 		libegl1 \
 		libxext6 \
 		libx11-6 \
+		libxcursor1 \
+		libxrandr2 \
+		libxi6 \
+		libxkbcommon0 \
+		libxkbcommon-x11-0 \
+		libx11-xcb1 \
 		# dev libraries
 		clang \
 		wget \
@@ -34,12 +40,7 @@ RUN apt-get update \
 		xclip \
 		xsel \
 		fontconfig \
-		libxcursor1 \
-		libxrandr2 \
-		libxi6 \
-		libxkbcommon0 \
-		libxkbcommon-x11-0 \
-		libx11-xcb1 \
+		locales \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Env vars for the nvidia-container-runtime.
@@ -64,7 +65,7 @@ RUN curl https://bootstrap.pypa.io/get-pip.py | python3 \
 	&& python3 -m pip install norminette
 
 # downloading neovim
-RUN wget https://github.com/neovim/neovim/releases/download/v0.9.0/nvim-linux64.tar.gz \
+RUN wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz \
 	&& tar xzvf nvim-linux64.tar.gz \
 	&& rm -rf nvim-linux64.tar.gz \
 	&& ln -s /usr/local/bin/nvim-linux64/bin/nvim /usr/local/bin/ \
@@ -83,12 +84,21 @@ RUN mkdir -p /root/.ssh \
 # setting nvim as default commit editor
 RUN git config --global core.editor "nvim -u /root/.config/nvim/git_init.lua"
 
-WORKDIR /usr/local/share/fonts
+# WORKDIR /usr/local/share/fonts
 
-#installing font
-RUN wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \
-	&& unzip JetBrainsMono.zip
+# installing font
+# RUN wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \
+# 	&& unzip JetBrainsMono.zip
+COPY ./JetBrainsMono-Medium.ttf ./NotoColorEmoji.ttf /usr/local/share/fonts
+RUN fc-cache -fv
 
 WORKDIR /app
+
+# enabling utf-8 encoding support
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
+ENV LC_ALL en_US.UTF-8
+RUN update-locale
 
 ENTRYPOINT ["neovide", "--nofork"]

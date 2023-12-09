@@ -1,5 +1,9 @@
 #!/bin/bash
 
+LOGFILE=$HOME/.config/dockIDE/output.log
+
+echo "" >> $LOGFILE
+date >> $LOGFILE
 docker run                                                       \
  	--rm                                                         \
  	-v /tmp/.X11-unix:/tmp/.X11-unix                             \
@@ -12,4 +16,4 @@ docker run                                                       \
  	-e XAUTHORITY                                                \
  	-e QT_X11_NO_MITSHM=1                                        \
 	--env-file $HOME/.config/dockIDE/user.env                    \
-	trantorian/nvim:0.9 > output.log 2>&1 &
+	trantorian/nvim:1.0 >> $LOGFILE 2>&1 &
