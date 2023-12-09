@@ -15,6 +15,7 @@ Feel free to build on the base image to add any dependency you need.
 - terminal integration ([toggleterm](https://github.com/akinsho/toggleterm.nvim)
 - file tree ([nvim-tree](https://github.com/nvim-tree/nvim-tree.lua))
 - norminette linting (for 42 schools)
+- utf-8 characters (Noto Color Emoji)
 
 and much, much more
 
@@ -22,7 +23,7 @@ and much, much more
 
 ## Installation
 
-> _PLease note that you will need to have [docker](https://docs.docker.com/engine/install/) installed for dockIDE to work_
+> ℹ  PLease note that you will need to have [docker](https://docs.docker.com/engine/install/) installed for dockIDE to work
 
 ```sh
 git clone https://github.com/Trantorian1/DockIDE.git \
@@ -31,9 +32,12 @@ git clone https://github.com/Trantorian1/DockIDE.git \
 && dockide
 ```
 
+_DockIDE does not override your existing neovim or vim config and can be used
+alongside other configurations_
+
 ## Git integration
 
-> For git integration to work, you will need to specify your git username
+> ℹ  For git integration to work, you will need to specify your git username
 and email in /dockIDE/user.env
 
 ```sh

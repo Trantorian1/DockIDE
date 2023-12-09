@@ -87,8 +87,6 @@ RUN git config --global core.editor "nvim -u /root/.config/nvim/git_init.lua"
 # WORKDIR /usr/local/share/fonts
 
 # installing font
-# RUN wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \
-# 	&& unzip JetBrainsMono.zip
 COPY ./JetBrainsMono-Medium.ttf ./NotoColorEmoji.ttf /usr/local/share/fonts
 RUN fc-cache -fv
 
